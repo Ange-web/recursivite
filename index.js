@@ -43,7 +43,7 @@ const dossierPrincipal = {
         return;
     }
     for(const child of filename.contenu){
-        console.log(child.nom)
+        fileexplorer(child)
     }
   }
 
