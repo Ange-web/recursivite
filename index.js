@@ -36,3 +36,9 @@ const dossierPrincipal = {
       },
     ],
   }
+
+  const fileexplorer = (filename)=>{
+    console.log(filename.nom)
+  }
+
+  fileexplorer(dossierPrincipal)
