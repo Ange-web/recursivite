@@ -37,13 +37,18 @@ const dossierPrincipal = {
     ],
   }
 
-  const fileexplorer = (filename)=>{
-    console.log(filename.nom);
-    if(filename.contenu === undefined){
-        return;
+  const fileexplorer = (filename,level=0)=>{
+    
+    if(level ===0){
+      console.log(filename.nom)
     }
+    if(level === 1 ){
+      console.log(filename.nom);
+      return;
+    }
+  if(filename.contenu)
     for(const child of filename.contenu){
-        fileexplorer(child)
+        fileexplorer(child,level +1)
     }
   }
 
